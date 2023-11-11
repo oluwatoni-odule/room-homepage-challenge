@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "League Spartan", sans-serif;
+}
+
+.shop {
+  padding: 2rem;
+}
+.shop h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.shop p {
+  color: hsl(0, 0%, 63%);
+  font-weight: 500;
+}
+.shop .button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  color: hsl(0, 0%, 0%);
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  cursor: pointer;
+}
+.shop .button:active {
+  scale: 1.1;
+}
+
+.about {
+  padding: 2rem;
+}
+.about h3 {
+  margin: 1rem 0;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.about p {
+  color: hsl(0, 0%, 63%);
+  font-weight: 500;
+}
+.about .button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  color: hsl(0, 0%, 0%);
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  cursor: pointer;
+}
+.about .button:active {
+  scale: 1.1;
+}
+
+.furniture-1 {
+  width: 100%;
+}
+
+.furniture-2 {
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  main .first-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  main .first-row #header {
+    position: relative;
+    background-image: url("desktop-image-hero-1.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 65vw;
+  }
+  main .first-row #header .slider {
+    position: absolute;
+    bottom: 0;
+    right: -5rem;
+  }
+  main .first-row #header .room-con menu {
+    visibility: hidden;
+  }
+  main .first-row #header .room-con .room {
+    display: none;
+  }
+  main .first-row #header #navbar-1 {
+    visibility: hidden;
+  }
+  main .first-row #header #navbar-2 {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    visibility: visible;
+    width: 80%;
+    padding: 2rem;
+    z-index: 3;
+    top: 0;
+    background: transparent;
+  }
+  main .first-row #header #navbar-2 .room {
+    margin-right: 3rem;
+  }
+  main .first-row #header #navbar-2 .menu-items {
+    display: flex;
+    flex-direction: row;
+    color: hsl(0, 0%, 100%);
+  }
+  main .first-row #header #navbar-2 .menu-items div {
+    margin-right: 1.5rem;
+    cursor: pointer;
+  }
+  main .first-row #header #navbar-2 .menu-items div:hover {
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+  }
+  main .first-row .shop {
+    width: 40vw;
+  }
+  main .second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  main .second-row section img {
+    width: 30vw;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+main header {
+  position: relative;
+  background-image: url("mobile-image-hero-1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+}
+main header .room-con {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+main header .room-con .room {
+  height: 17px;
+}
+main header .room-con menu {
+  height: 17px;
+  transition: all 0.3s ease-in-out;
+}
+main header .room-con menu img {
+  position: absolute;
+  cursor: pointer;
+  left: 2rem;
+}
+main header #navbar-1 {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  visibility: hidden;
+  width: 100%;
+  padding: 2rem;
+  z-index: 3;
+  top: 0;
+  left: -100%;
+  background-color: hsl(0, 0%, 100%);
+  transition: all 0.3s ease-in-out;
+}
+main header #navbar-1 .room {
+  display: none;
+}
+main header #navbar-1.open {
+  left: 0;
+}
+main header #navbar-1 .menu-items {
+  margin-left: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  cursor: pointer;
+}
+main header #navbar-1 .menu-items div {
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 0%);
+}
+main header #navbar-2 {
+  visibility: hidden;
+}
+main header .slider {
+  height: 3rem;
+  width: 5rem;
+  padding: 1rem;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(0, 0%, 0%);
+}
+main header .slider img {
+  width: 0.5rem;
+  cursor: pointer;
+}
+main #overlay {
+  position: fixed;
+  visibility: hidden;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}/*# sourceMappingURL=main.css.map */
